@@ -1,0 +1,90 @@
+.example{
+    background-color:#800080;
+    color: white;
+    font-size: 30px;
+    border: 3px solid rgb(49, 2, 94);
+    font-family: sans-serif;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.items{
+    background-color: aqua;
+    width: 350px;
+    border: 3px solid  rgb(2, 122, 122);
+    height: 400px;
+}
+
+.third-item{
+    background-color: aqua;
+    width: 500px;
+    height: 400px;
+}
+
+.heading{
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.para{
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.item-container{
+    width: auto;
+    height: 50px;
+    display: flex;
+/* flex-wrap: wrap; */
+    justify-content: space-between;
+
+}
+
+.boxes{
+    background-color: rgb(218, 219, 219);
+    width: 200px;
+    border: 1px solid  rgb(50, 51, 51);
+    height: 30px;
+
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.new-box{
+    background-color: rgb(218, 219, 219);
+    width: 460px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid  rgb(50, 51, 51);
+    height: 20px;
+}
+
+.first-para{
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.second-para{
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
