@@ -26,8 +26,11 @@ body {
 }
 
 .cont{
-        margin: 30px;
-}
+        margin-top: 0px;
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
 
 .search{
     /* border: 2px solid black; */
@@ -54,7 +57,7 @@ body {
     color: black;
 }
 .main{
-    border: 2px solid rgb(49, 238, 2);
+    /* border: 2px solid rgb(49, 238, 2); */
    /* padding-top: 30px; */
    margin-top: 20px;
     height: 70vh;
@@ -67,7 +70,7 @@ body {
     background-color:  #faeffa;;
     height: 100%;
     width: 80%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .list{
@@ -77,7 +80,7 @@ body {
 .second{
     height: 100%;
     width: 20%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin-left: 20px;
     background-color:  #FF80FF;;
 }
