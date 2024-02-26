@@ -1,0 +1,199 @@
+body{
+    background-color: #55FFE5;
+}
+
+.container{
+    /* border: 2px solid black; */
+    height: 670px;
+}
+
+.text-container{
+    /* border: 2px solid black; */
+    margin-left: 80px;
+    margin-top: 0px;
+}
+.text-box{
+    /* border: 2px solid black; */
+}
+.text{
+    /* border: 2px solid black; */
+    margin-top: 0px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#contact{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container{
+    /* border: 2px solid black; */
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 30px;
+    height: 470px;
+    display: flex;
+}
+
+.first-container{
+    /* border: 2px solid black; */
+        height: 480px;
+        width: 60%;
+        background-color: whitesmoke;
+}
+
+.second-container{
+    height: 480px;
+    width: 40%;
+    background-color: rgb(8, 19, 165);
+}
+
+.send-request{
+    margin-left: 80px;
+    font-size: 20px;
+    color: rgb(8, 19, 165);
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.send-reques{
+    margin-left: 0px;
+    font-size: 20px;
+    color: rgb(8, 19, 165);
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fields{
+    height: 290px;
+    width: 70%;
+    margin-left: 80px;
+    /* margin-top: 30px; */
+    /* border: 2px solid rgb(159, 21, 21); */
+}
+
+/* .names{
+    width: 170px;
+   font-size: 10px;
+    border: 2px solid rgb(36, 231, 15);
+} */
+
+.inputs{
+    width: 210px;
+    height: 100px;
+    /* border: 2px solid rgb(106, 6, 105); */
+}
+
+
+input[type="text"] {
+    height: 28px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: whitesmoke;
+    font-size: 14px;
+    outline: none;
+    width: 200px;
+    
+}
+
+
+input[type="text"]:focus {
+    border-color:#54c3f3;
+    box-shadow: 0px 0px 20px rgba(21, 182, 182, 0.5)
+}
+
+
+.button {
+    height: 38px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: rgb(8, 19, 165);
+    font-size: 14px;
+    outline: none;
+    border-radius: 50px;
+    display: flex;
+    margin-top: 10px;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.button:hover {
+    border-color:#54c3f3;
+    box-shadow: 0px 0px 20px rgba(21, 182, 182, 0.5)
+}
+
+
+input[type="button"]:focus {
+    border-color:#54c3f3;
+    box-shadow: 0px 0px 20px rgba(21, 182, 182, 0.5)
+}
+
+#reach{
+    color: whitesmoke;
+    margin-left: 30px;
+}
+
+.o{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.t{
+    /* border: 2px solid black; */
+    display: flex;
+    /* margin-top: 10px; */
+    justify-content: space-between;
+}
+
+
+.all{
+    /* border: 2px solid white; */
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 250px;
+    margin-top: 60px;
+}
+
+.contain{
+    /* border: 2px solid white; */
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boxe{
+    /* border: 2px solid white; */
+    width: 90px;
+}
+.boxer{
+    /* border: 2px solid white; */
+    width: 240px;
+}
+
+.boxee{
+    /* border: 2px solid white; */
+    width: 90px;
+    height: 100px;
+    padding-top: 20px;
+}
+.boxerr{
+    /* border: 2px solid white; */
+    width: 240px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

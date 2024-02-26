@@ -1,0 +1,61 @@
+body{
+background-color: bisque;
+}
+
+
+/*  */
+
+
+.class{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-image: url(hello.jpg);
+    object-fit: fill;
+}
+
+
+.image-container {
+    width: 700px; 
+    height: 300px; 
+    border: 1px solid #1b1919;
+    overflow: hidden;
+    margin: auto;
+    opacity: 0.7;
+    margin-top: 50px;
+
+}
+
+
+.image-container img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+#box-one{
+    position: absolute;
+    top: 200px;
+    left: 600px;
+}
+
+#box-two{
+    position: absolute;
+   display: flex;
+   justify-content: center;
+
+}
+
+#box-three{
+    position: absolute;
+    left: 880px;
+}
+#box-four{
+    position: absolute;
+    top: 330px;
+}
+#box-five{
+    position: absolute;
+    top: 330px;
+    left: 820px;
+}

@@ -1,11 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>www.khizaralam.com</title>
+    <link rel="stylesheet" href="k213868_task06.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        center {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        b {
+            color: #0066cc;
+        }
+
+        hr {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .head {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px solid black;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .product {
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .innerproduct {
+            flex: 2;
+        }
+
+        .innerdollar1,
+        .innerdollar2 {
+            flex: 1;
+        }
+
+        .innerInput {
+            flex: 1.5;
+            margin: 0 10px;
+            padding: 5px;
+        }
+
+        .innerButton {
+            background-color: #ff6666;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .total,
+        .includingdiscount {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button.close {
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+
+        button.checkout {
+            background-color: #0066cc;
+            border: none;
+            color: white;
+            border-radius: 4px;
+        }
+    </style>
+
 </head>
+
 <body>
-    hello
+
+    <center>
+        <a href="k213868_task07.html">
+            <b>
+                Click to go to Task 07
+            </b>
+        </a>
+        <br>
+        <hr>
+    </center>
+
+    <div class="head">
+        <span> My Cart</span>
+    </div>
+    <div class="product">
+        <span class="innerproduct">Product 1 </span>
+        <span class="innerdollar1">$10 </span>
+        <input type="text" class="innerInput">
+        <span class="innerdollar2">$20</span>
+        <span><button class="innerButton">X</button></span>
+    </div>
+    <div class="product">
+        <span class="innerproduct">Product 2 </span>
+        <span class="innerdollar1">$30 </span>
+        <input type="text" class="innerInput">
+        <span class="innerdollar2">$180</span>
+        <span><button class="innerButton">X</button></span>
+    </div>
+    <div class="product">
+        <span class="innerproduct">Product 3 </span>
+        <span class="innerdollar1">$40 </span>
+        <input type="text" class="innerInput">
+        <span class="innerdollar2">$40</span>
+        <span><button class="innerButton">X</button></span>
+    </div>
+    <div class="total">
+        <span><b>Total</b></span>
+        <span><b>240</b></span>
+    </div>
+    <div class="includingdiscount">
+        <span><b>Total (including discount)</b></span>
+        <span><b>120</b></span>
+    </div>
+    <button class="close">Close</button>
+    <button class="checkout">Checkout</button>
+
 </body>
+
 </html>

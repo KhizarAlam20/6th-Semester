@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.khizaralam.com</title>
+    <link rel="stylesheet" href="k213868_task01.css">
+</head>
+<body> 
+    <center>
+        <a href="k213868_task02.html">
+            <b>
+               Click to go to Task 02
+            </b>
+        </a>
+        <br>
+        <hr>
+    </center>
+
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="submit.php" method="post">
+            <div class="row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+            <div class="row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </div>
+            <div class="row">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Create a strong password">
+            </div>
+            <div class="row">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required> I agree to the <a href="helloworld.html">Terms &amp; Conditions</a>
+                </label>
+            </div>
+            <div class="row">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
