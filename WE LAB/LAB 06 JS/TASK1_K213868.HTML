@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>www.khizaralam.com</title>
+</head>
+
+<body>
+
+    <center>
+        <p><strong><a href="task2_k213868.html">Click here to go to task 2</a></strong></p>
+        <hr>
+    </center>
+
+  <div id="output">
+  </div>
+
+  <script>
+    const exampleFunction = () => {
+      const constVariable = 'I am a K213868';
+
+      let letVariable = 42;
+
+      var varVariable = 'I am a var';
+
+      let nothingVariable;
+
+      let result = letVariable + 10;
+      letString = constVariable + ' and this is TASK 1';
+      letBoolean = true;
+      letObject = { key: 'value' };
+      letArray = [1, 2, 3];
+
+      document.getElementById('output').innerHTML += '<p>' + result + '</p>';
+      document.getElementById('output').innerHTML += '<p>' + letString + '</p>';
+      document.getElementById('output').innerHTML += '<p>' + letBoolean + '</p>';
+      document.getElementById('output').innerHTML += '<p>' + JSON.stringify(letObject) + '</p>';
+      document.getElementById('output').innerHTML += '<p>' + letArray.join(', ') + '</p>';
+
+      return 'Function execution complete';
+    };
+
+    console.log(exampleFunction());
+  </script>
+
+</body>
+
+</html>

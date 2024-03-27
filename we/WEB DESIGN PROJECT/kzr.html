@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.khizaralam.com</title>
+
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Custom styles go here */
+
+        #quizDialog {
+            @apply hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 border-2 border-black z-50;
+        }
+
+        #quizDialog form {
+            @apply flex flex-col;
+        }
+
+        #quizDialog label {
+            @apply mb-4;
+        }
+
+        #quizDialog input {
+            @apply px-4 mb-6;
+        }
+
+        #quizDialog button {
+            @apply px-6 py-3 cursor-pointer;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+
+    <header>
+        <nav class="nav bg-white align-center flex justify-between items-center sm:px-16 sm:py-4 sm:justify-between">
+            <img class="w-16 h-16 md:w-24 md:h-24 ml-4" src="kzr.png" alt="logo">
+
+            <ul class="hidden sm:flex ul mx-auto flex justify-between font-mono font-bold text-sm sm:text-xl" id="list">
+                <li class="transform hover:scale-105 px-3 sm:px-7 hover:border hover:border-black transition hover:ease-out duration-700 hover:bg-black hover:text-white" id="home"><a href="#">Home</a></li>
+                <li class="transform hover:scale-105 px-3 sm:px-7 hover:border hover:border-black transition hover:ease-out duration-700 hover:bg-black hover:text-white"><a href="#">About</a></li>
+                <li class="transform hover:scale-105 px-3 sm:px-7 hover:border hover:border-black transition hover:ease-out duration-700 hover:bg-black hover:text-white" id="quiz"><a href="#">Quizes</a></li>
+
+                <li class="relative group">
+                    <div class="transform hover:scale-105 px-3 sm:px-7 hover:border hover:border-black transition hover:ease-out duration-700 hover:bg-black hover:text-white cursor-pointer"><a href="#">Courses</a></div>
+                    <ul class="absolute hidden bg-black text-white p-2 space-y-1 group-hover:block">
+                        <li class="hover:bg-gray-600" id="angular"><a href="#">Angular</a></li>
+                        <li class="hover:bg-slate-700" id="java"><a href="#">Java</a></li>
+                        <li class="hover:bg-slate-700" id="C"><a href="#">C</a></li>
+                        <li class="hover:bg-slate-700" id="c++"><a href="#">C++</a></li>
+                        <li class="hover:bg-slate-700" id="python"><a href="#">Python</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:hidden cursor-pointer mr-4" id="menu">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </nav>
+    </header>
+
+    <main>
+    
+        <div class="container mx-auto my-10 text-left" id="main-container">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-Montserrat font-bold text-black ml-10">
+                Welcome to kzr. Education Website
+            </h1>
+
+            <div id="quizDialog" class="mx-10 mt-10 d-none border-black hidden">
+                <form action="quiz.html" method="GET" class="bg-white p-4 border border-black rounded">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+            
+                    <div class="mb-3">
+                        <label for="id" class="form-label">ID:</label>
+                        <input type="text" id="id" name="id" class="form-control" required>
+                    </div>
+            
+                    <button type="submit" class="btn btn-primary bg-black text-white px-6 py-1">Submit</button>
+                </form>
+            </div>
+            
+
+
+            <p class="text-lg sm:text-xl md:text-2xl font-Acme text-gray-600 mt-10 ml-10">
+                Explore the world of knowledge and creativity with KZR Khizar Alam. This platform is dedicated to providing a rich learning experience through a vast collection of educational videos on the latest development technologies. Whether you are a beginner or an experienced developer, you'll find insightful tutorials and in-depth guides to enhance your skills and stay updated with the ever-evolving tech landscape.
+                <br><br> Additionally, our quiz section offers an interactive way for users to test their knowledge. Challenge yourself with quizzes covering a variety of programming languages, frameworks, and concepts. Learn, practice, and assess your understanding of key topics in the world of development. Join us on this educational journey, and let's grow together!
+            </p>
+
+             
+            <br><br>
+            <div class="mt-6 flex ml-10 space-x-3 ">
+                <span class="px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300 mb-6">Programming Quizzes</span>
+                <span class="px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300 mb-6">Development Tutorials</span>
+                <span class="px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300 mb-6">Tech Updates</span>
+            </div>
+        </div>
+    </main>
+
+   
+
+    <footer class="bg-black text-white py-8 mt-6">
+        <div class="container mx-auto flex flex-col items-center justify-center">
+            <div class="mb-4">
+                <img class="w-12 h-12 md:w-16 md:h-16" src="kzr.png" alt="logo">
+            </div>
+            <ul class="flex space-x-4 text-sm">
+                <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                <li><a href="#" class="hover:text-gray-400">Fast NU</a></li>
+                <li><a href="#" class="hover:text-gray-400">21k3868</a></li>
+                <li><a href="#" class="hover:text-gray-400">Developer</a></li>
+            </ul>
+            <div class="mt-4">
+                <p>&copy; 2024 KZR Khizar Alam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="kzr.js"></script>
+</body>
+
+</html>

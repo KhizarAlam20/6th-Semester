@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>www.khizaralam.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    #slider-container {
+      width: 300px;
+      overflow: hidden;
+      margin: auto;
+    }
+
+    #image-slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slider-image {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+
+  <center>
+    <p class="mx-16 text-2xl text-gray-900"><strong><a href="task1_k213868.html">GO BACK TO TASK 1</a></strong></p>
+    <hr>
+</center>
+
+
+<div id="slider-container" class="rounded-lg shadow-lg overflow-hidden">
+  <div id="image-slider">
+    <img class="slider-image" src="https://images.pexels.com/photos/17226556/pexels-photo-17226556/free-photo-of-sunlight-piercing-clouds.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1">
+    <img class="slider-image" src="https://images.pexels.com/photos/19642434/pexels-photo-19642434/free-photo-of-alpine-landscape-with-matterhorn-on-the-left.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
+    <img class="slider-image" src="https://images.pexels.com/photos/18263990/pexels-photo-18263990/free-photo-of-group-of-baby-sheep-walking-in-the-woods-in-fog.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3">
+  </div>
+</div>
+
+<script>
+  const slider = document.getElementById('image-slider');
+  let currentIndex = 0;
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slider.children.length;
+    updateSlider();
+  }
+
+  function updateSlider() {
+    const translateValue = -currentIndex * 100 + '%';
+    slider.style.transform = 'translateX(' + translateValue + ')';
+  }
+
+  setInterval(nextSlide, 3000);
+</script>
+
+</body>
+</html>

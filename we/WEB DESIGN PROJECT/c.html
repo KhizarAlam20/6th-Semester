@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C</title>
+   
+      <!-- Tailwind CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  
+      <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body class=" p-8">
+    <header>
+        <nav class="nav bg-white align-center flex justify-between items-center sm:px-16 sm:py-4 sm:justify-between">
+            <img class="w-16 h-16 md:w-24 md:h-24 ml-4" src="kzr.png" alt="logo">
+
+            <ul class="hidden sm:flex ul mx-auto flex justify-between font-mono font-bold text-sm sm:text-xl" id="list">
+                <li class="transform hover:scale-105 px-3 sm:px-7 hover:border hover:border-black transition hover:ease-out duration-700 hover:bg-black hover:text-white" id="home"><a href="kzr.html">Home</a></li>
+                <li class="transform hover:scale-105 px-3 sm:px-7 hover:border hover:border-black transition hover:ease-out duration-700 hover:bg-black hover:text-white"><a href="#">About</a></li>
+                <li class="transform hover:scale-105 px-3 sm:px-7 hover:border hover:border-black transition hover:ease-out duration-700 hover:bg-black hover:text-white" id="quiz"><a href="#">Quizes</a></li>
+
+                <li class="relative group">
+                    <div class="transform hover:scale-105 px-3 sm:px-7 hover:border hover:border-black transition hover:ease-out duration-700 hover:bg-black hover:text-white cursor-pointer"><a href="#">Courses</a></div>
+                    <ul class="absolute hidden bg-black text-white p-2 space-y-1 group-hover:block">
+                        <li class="hover:bg-gray-600" id="angular"><a href="angular.html">Angular</a></li>
+                        <li class="hover:bg-slate-700" id="java"><a href="java_page.html">Java</a></li>
+                        <li class="hover:bg-slate-700" id="C"><a href="c.html">C</a></li>
+                        <li class="hover:bg-slate-700" id="c++"><a href="cpp.html">C++</a></li>
+                        <li class="hover:bg-slate-700" id="python"><a href="python.html">Python</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:hidden cursor-pointer mr-4" id="menu">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </nav>
+    </header>
+
+    <main class="mt-8 mb-8">
+
+   <h1 class="font-mono font-bold mx-16 flex justify-between items-center transform hover:scale-105 px-3 sm:px-7 hover:border hover:border-black transition hover:ease-out duration-700 hover:bg-black hover:text-white text-sm md:text-2xl">C Tutorials</h1>
+    <div class="flex justify-center items-center mb-4 mt-6">
+        <button id="prevBtn"
+            class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-4 disabled:opacity-50">Previous</button>
+        <button id="nextBtn"
+            class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50">Next</button>
+    </div>
+
+    <div id="videoContainer" class="flex justify-center items-center">
+    </div>
+
+    <script>
+        const videos = [
+        "https://www.youtube.com/embed/YXcgD8hRHYY?si=6q77-x6xGNKYRRe8" ,
+        "https://www.youtube.com/embed/IygPoF9Y5O8?si=Tfm3FYad69ZrgrBX",
+       "https://www.youtube.com/embed/irqbmMNs2Bo?si=LlWYa6lr2bKWCg4L"
+        ];
+
+        let currentVideoIndex = 0;
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const videoContainer = document.getElementById('videoContainer');
+
+        loadVideo();
+
+        function loadVideo() {
+            const iframe = document.createElement('iframe');
+            iframe.src = videos[currentVideoIndex];
+            iframe.width = "560";
+            iframe.height = "315";
+            iframe.title = "YouTube video player";
+            iframe.frameBorder = "0";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            iframe.allowFullscreen = true;
+            videoContainer.innerHTML = ''; 
+            videoContainer.appendChild(iframe);
+
+            prevBtn.disabled = currentVideoIndex === 0;
+            nextBtn.disabled = currentVideoIndex === videos.length - 1;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentVideoIndex > 0) {
+                currentVideoIndex--;
+                loadVideo();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentVideoIndex < videos.length - 1) {
+                currentVideoIndex++;
+                loadVideo();
+            }
+        });
+    </script>
+   
+</main>
+
+
+<footer class="bg-black text-white py-8 mt-6">
+    <div class="container mx-auto flex flex-col items-center justify-center">
+        <div class="mb-4">
+            <img class="w-12 h-12 md:w-16 md:h-16" src="kzr.png" alt="logo">
+        </div>
+        <ul class="flex space-x-4 text-sm">
+            <li><a href="#" class="hover:text-gray-400">Home</a></li>
+            <li><a href="#" class="hover:text-gray-400">Fast NU</a></li>
+            <li><a href="#" class="hover:text-gray-400">21k3868</a></li>
+            <li><a href="#" class="hover:text-gray-400">Developer</a></li>
+        </ul>
+        <div class="mt-4">
+            <p>&copy; 2024 KZR Khizar Alam. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="kzr.js"></script>
+
+</body>
+
+</html>

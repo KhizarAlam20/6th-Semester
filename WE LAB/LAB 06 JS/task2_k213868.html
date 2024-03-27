@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.khizaralam.com</title>
+</head>
+<body>
+    <center>
+        <p><strong><a href="task3_k213868.html">Click here to go to task 3</a></strong></p>
+        <hr>
+    </center>
+
+    <center>
+
+    
+
+        <br><br>
+        <input type="text" id="string" placeholder="Enter a string...">
+        <button onclick="reverseString()">Convert</button>
+  
+    
+    <br>
+   <h3 style="color: red;" id = "converted">Enter String</h3>
+
+</center>
+    <br><br>
+    <script>
+        reverseString = () => {
+            var str = document.getElementById("string").value; 
+            var rev = str.split('').reverse().join('');
+            var a = rev.split("").sort().join("");
+            document.getElementById("converted").style.color= "#00A36C";
+            document.getElementById("converted").innerHTML= a;
+        }
+    </script>
+</body>
+</html>

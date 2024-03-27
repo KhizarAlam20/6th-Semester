@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kzr. Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #040404;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center h-screen p-8">
+
+<div class="text-center">
+
+    <div class="mb-16 font-bold">
+        <p id="nameDisplay">Name: </p>
+        <p id="idDisplay" class="mx-24">ID: </p>
+    </div>
+
+
+  <div id="timer" class="text-4xl font-bold mb-4">15</div>
+  <div id="question" class="text-2xl mt-4 mb-6 font-semibold">Multilevel is not the part of which language?</div>
+  <div id="options" class="mb-4">
+    <input type="radio" name="answer" value="a" id="a" class="mr-2"><label for="a" class="mr-4">Java</label>
+    <input type="radio" name="answer" value="b" id="b" class="mr-2"><label for="b" class="mr-4">C</label>
+    <input type="radio" name="answer" value="c" id="c" class="mr-2"><label for="c" class="mr-4">Python</label>
+    <input type="radio" name="answer" value="d" id="d" class="mr-2"><label for="d" class="mr-4">CPP</label>
+  </div>
+
+  <!-- <button id="submitBtn" class="bg-black text-white py-2 px-4 mr-4">Submit</button> -->
+  
+  <div id="marks" class="mt-4 text-xl font-semibold">Marks: 0</div>
+
+  <button id="homeBtn" class="bg-black text-white py-2 px-9 mt-6 ">Home</button>
+</div>
+
+<script>
+    document.getElementById("homeBtn").addEventListener("click", function () {
+        window.location.href = "kzr.html";
+    });
+
+
+
+
+    function startTimerAndTransition(duration, display, questionDisplay, optionsContainer, marksDisplay) {
+        let timer = duration, minutes, seconds;
+        let currentQuestion = 1;
+        let marks = 0;
+
+     
+        const urlParams = new URLSearchParams(window.location.search);
+const name = urlParams.get("name");
+const id = urlParams.get("id");
+
+    document.getElementById("nameDisplay").textContent = "Name: " + name;
+    document.getElementById("idDisplay").textContent = "ID: " + id;
+        
+       
+
+        const timerInterval = setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = duration;
+                currentQuestion++;
+
+                if (currentQuestion === 2) {
+                    checkAnswer('b');
+                    display.textContent = "15";
+                    questionDisplay.textContent = "Which language is commonly used for developing mobile applications??";
+                    optionsContainer.innerHTML = `
+                        <input type="radio" name="answer" value="a" id="a" class="mr-2"><label for="a" class="mr-4">Cpp</label>
+                        <input type="radio" name="answer" value="b" id="b" class="mr-2"><label for="b" class="mr-4">Swift</label>
+                        <input type="radio" name="answer" value="c" id="c" class="mr-2"><label for="c" class="mr-4">Python</label>
+                        <input type="radio" name="answer" value="d" id="d" class="mr-2"><label for="d" class="mr-4">Html</label>
+                    `;
+                } else if (currentQuestion === 3) {
+                    checkAnswer('a');
+                    display.textContent = "15";
+                    questionDisplay.textContent = "What does API stand for in the context of software development?";
+                    optionsContainer.innerHTML = `
+                        <input type="radio" name="answer" value="a" id="a" class="mr-2"><label for="a" class="mr-4">Application Programming Interface</label>
+                        <input type="radio" name="answer" value="b" id="b" class="mr-2"><label for="b" class="mr-4">Advanced Programming Interface</label>
+                        <input type="radio" name="answer" value="c" id="c" class="mr-2"><label for="c" class="mr-4">Advanced Protocol Integration</label>
+                        <input type="radio" name="answer" value="d" id="d" class="mr-2"><label for="d" class="mr-4"> Application Process Integration</label>
+                    `;
+                } else if (currentQuestion === 4) {
+                    checkAnswer('c');
+                    display.textContent = "15";
+                    questionDisplay.textContent = "Which programming language is known for building web pages?";
+                    optionsContainer.innerHTML = `
+                        <input type="radio" name="answer" value="a" id="a" class="mr-2"><label for="a" class="mr-4">Java</label>
+                        <input type="radio" name="answer" value="b" id="b" class="mr-2"><label for="b" class="mr-4">Python</label>
+                        <input type="radio" name="answer" value="c" id="c" class="mr-2"><label for="c" class="mr-4">HTML</label>
+                        <input type="radio" name="answer" value="d" id="d" class="mr-2"><label for="d" class="mr-4">C++</label>
+                    `;
+                } else if (currentQuestion === 5) {
+                    checkAnswer('a');
+                    clearInterval(timerInterval); // Stop the timer
+                    display.style.display = "none"; // Hide the timer
+                    questionDisplay.textContent = "Quiz Complete!";
+                    optionsContainer.innerHTML = `
+                        <button class="bg-green-500 text-white py-2 px-4 rounded-md" onclick="location.reload()">Restart Quiz</button>
+                    `;
+                }
+            }
+        }, 1000);
+
+        function checkAnswer(selectedOption) {
+            const correctAnswer = getCorrectAnswer(currentQuestion);
+
+            if (selectedOption === correctAnswer) {
+                marks++;
+            } else {
+                marks--;
+            }
+
+            marksDisplay.textContent = "Marks: " + marks;
+        }
+
+        function getCorrectAnswer(questionNumber) {
+            switch (questionNumber) {
+                case 1:
+                    return 'a';
+                case 2:
+                    return 'b';
+                case 3:
+                    return 'a';
+                case 4:
+                    return 'c';
+                case 5:
+                    return 'a';
+                default:
+                    return '';
+            }
+        }
+    }
+
+    const timerDuration = 15;
+
+    window.onload = function () {
+        const display = document.getElementById("timer");
+        const questionDisplay = document.getElementById("question");
+        const optionsContainer = document.getElementById("options");
+        const marksDisplay = document.getElementById("marks");
+
+        startTimerAndTransition(timerDuration, display, questionDisplay, optionsContainer, marksDisplay);
+    };
+</script>
+</body>
+</html>
+

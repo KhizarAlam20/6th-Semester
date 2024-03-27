@@ -1,0 +1,107 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+
+    }
+
+    body
+    {
+        background: #f9f9f9;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    header
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 100px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 100;
+        /* border: 2px solid black; */
+    }
+
+    .logo
+    {
+        font-size: 2em;
+        color: #359381;
+        pointer-events: none;
+        margin-right: 200px;
+
+    }
+
+
+    .nav a
+    {
+        text-decoration: none;
+        color: #359381;
+        padding: 6px 15px;
+        border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    }
+
+    .nav a:hover,
+    .nav a.active
+    {
+    background-color:  #359381;
+    color: rgb(255, 253, 251);
+    }
+
+    .parallax
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
+
+    #text
+    {
+        position: absolute;
+        font-size: 5em;
+        color: #ffffff;
+
+        text-shadow: 6px 4px 2px rgba(0,0,0, .2);
+    }
+
+
+
+    .parallax img
+    {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+    }
+
+    .sec
+    {
+        /* border: 2px solid black; */
+        position: relative;
+        padding: 100px;
+        background:#003329;
+    }
+
+
+    #about
+    {
+        font-size: 2em;
+        color: #ffffffae;
+        margin-bottom: 50px;
+    }
+
+    #para
+    {
+        color: #ffffff6e;
+        /* margin-bottom: 50px; */
+    }

@@ -1,0 +1,62 @@
+Users
+
+UserID (Primary Key)
+Username
+Password
+Email
+Role (e.g., admin, regular user)
+Plants
+
+PlantID (Primary Key)
+Name
+CategoryID (Foreign Key referencing Categories table)
+Description
+Growth
+WateringNeeds
+SunlightRequirements
+FertilizerRequirements
+Categories
+
+CategoryID (Primary Key)
+Name
+Storage
+
+StorageID (Primary Key)
+UserID (Foreign Key referencing Users table)
+PlantID (Foreign Key referencing Plants table)
+Quantity
+DateAdded
+LastWatered
+NextWateringDate
+Sales
+
+SaleID (Primary Key)
+UserID (Foreign Key referencing Users table)
+PlantID (Foreign Key referencing Plants table)
+QuantitySold
+SaleDate
+Reminders
+
+ReminderID (Primary Key)
+UserID (Foreign Key referencing Users table)
+ReminderText
+ReminderDate
+Offers
+
+OfferID (Primary Key)
+OfferText
+DiscountPercentage
+ExpiryDate
+ContactMe
+
+MessageID (Primary Key)
+Name
+Email
+Message
+Analytics (Optional)
+
+AnalyticsID (Primary Key)
+TotalSales
+MostSoldPlant
+LeastSoldPlant
+TotalUsers

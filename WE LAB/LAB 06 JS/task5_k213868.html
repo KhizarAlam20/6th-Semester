@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.khizaralam.com</title>
+</head>
+<body>
+    <center>
+        <p><strong><a href="task6_k213868.html">Click here to go to task 6</a></strong></p>
+        <hr>
+    </center>
+
+    <center>
+
+    
+
+        <br><br>
+        <input type="text" id="string" placeholder="Enter a string...">
+        <button onclick="checkPalindrom()">Check Palindrom</button>
+  
+    
+    <br>
+   <h3 style="color: red;" id = "converted">Enter String</h3>
+
+</center>
+    <br><br>
+    <script>
+        checkPalindrom = () => {
+            var str = document.getElementById("string").value; 
+            var rev = str.split('').reverse().join('');
+
+            if(rev === str){
+                document.getElementById("converted").style.color= "#00A36C";
+                document.getElementById("converted").innerHTML= "Palindrom :)";
+            }else{
+                document.getElementById("converted").style.color= "#FF0000";
+                document.getElementById("converted").innerHTML= "Not A palindrom!!!";
+            }
+        }
+    </script>
+</body>
+</html>

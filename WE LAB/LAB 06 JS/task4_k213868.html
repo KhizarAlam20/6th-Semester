@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="MASHAK.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.khizaralam.com</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-yellow-600 flex justify-center items-center h-screen">
+
+    <center>
+        <p class="mx-16 text-2xl text-white"><strong><a href="task5_k213868.html">Click here to go to task 5</a></strong></p>
+        <hr>
+    </center>
+
+
+    <div id="calculator" class="grid grid-cols-4 gap-2 max-w-md mx-auto bg-yellow-600 p-4 rounded-lg shadow-md">
+        <div id="display" class="col-span-4 text-right text-2xl p-4 mb-3 border rounded bg-">
+            0
+        </div>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('7')">7</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('8')">8</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('9')">9</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('+')">+</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('4')">4</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('5')">5</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('6')">6</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('-')">-</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('1')">1</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('2')">2</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('3')">3</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('*')">*</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('0')">0</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('%')">%</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('.')">.</button>
+        <button class="col-span-1 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="appendToDisplay('/')">/</button>
+        <button class="col-span-2 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="calculateResult()">=</button>
+        <button class="col-span-2 p-4 text-xl border rounded hover:bg-white hover:text-gray-800"
+            onclick="clearDisplay()">C</button>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+
+        function appendToDisplay(value) {
+            display.textContent += value;
+        }
+
+        function calculateResult() {
+            try {
+                display.textContent = eval(display.textContent);
+            } catch (error) {
+                display.textContent = 'Error';
+            }
+        }
+
+        function clearDisplay() {
+            display.textContent = '0';
+        }
+    </script>
+
+</body>
+
+</html>

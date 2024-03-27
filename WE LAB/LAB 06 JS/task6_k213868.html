@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.khizaralam.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <center>
+        <p class="mx-16 text-2xl text-gray-900"><strong><a href="task7_k213868.html">Click here to go to task 7</a></strong></p>
+        <hr>
+    </center>
+    <div class="w-full max-w-md p-4 bg-white shadow-md rounded">
+        <label for="name" class="block mb-2">Enter Name</label>
+        <input type="text" placeholder="Enter Name" id="name" class="border p-2 mb-4 w-full">
+
+        <label for="mail" class="block mb-2">Enter Mail</label>
+        <input type="text" placeholder="Enter Mail" id="mail" class="border p-2 mb-4 w-full">
+
+        <label for="password" class="block mb-2">Enter Password</label>
+        <input type="password" placeholder="Enter Password" id="password" class="border p-2 mb-4 w-full">
+
+        <label for="phone" class="block mb-2">Enter Phone</label>
+        <input type="number" placeholder="Enter Phone" id="phone" class="border p-2 mb-4 w-full">
+
+        <button onclick="showDetails()" class="bg-blue-500 text-white px-4 py-2 rounded">Show Data</button>
+
+        <div id="displayDetails" class="mt-4"></div>
+    </div>
+
+    <script>
+        showDetails = () => {
+            var name = document.getElementById("name").value;
+            var mail = document.getElementById("mail").value;
+            var password = document.getElementById("password").value;
+            var phone = document.getElementById("phone").value;
+
+            if (name === "" || mail === "" || password === "" || phone === "") {
+                window.alert("Fields Can't be empty");
+            } else if (!mail.includes("@")) {
+                window.alert("Invalid email format");
+            } else {
+                // Display the entered values
+                var displayDiv = document.getElementById("displayDetails");
+                displayDiv.innerHTML = `
+                    <p class="mb-2">Name: ${name}</p>
+                    <p class="mb-2">Email: ${mail}</p>
+                    <p class="mb-2">Password: ${password}</p>
+                    <p class="mb-2">Phone: ${phone}</p>
+                `;
+            }
+        }
+    </script>
+</body>
+
+</html>
